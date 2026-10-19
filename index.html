@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="https://zahirulislamshaann.github.io/mcss/master.css">
+    <script src="https://kit.fontawesome.com/ca4f94548a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="header" style="display: flex; margin-bottom: 20px;">
+        <h2>
+            <i class="fa-solid fa-clipboard-check"></i>
+            My Tasks
+        </h2>
+    </div>
+
+    <div id="taskContainer" style="display: flex; flex-wrap: wrap; gap: 20px;"></div>
+
+    <button class="pButton" style="width: 100%; max-width: 400px;" onclick="add()">
+        <i class="fa-solid fa-plus"></i> Add New Task
+    </button>
+
+    <div id="pop-up" class="pop-up">
+        <div class="card">
+            <h2>New Task.</h2>
+
+            <input type="text" placeholder="Add Title." id="title" style="width: 100%;">
+
+            <input placeholder="Add Description." id="description" style="width: 100%;"></input>
+
+            <button class="pButton" id="submitTask" onclick="addTask()" style="width: 100%;">
+                <i class="fa-solid fa-circle-plus"></i> Add Task
+            </button>
+
+            <p id="task-message"></p>
+
+            <button class="sButton" onclick="closePopup()" style="width: 100%;">
+                Cancel
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
