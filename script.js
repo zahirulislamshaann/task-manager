@@ -66,6 +66,7 @@ async function loadTasks() {
     data.forEach(function (task) {
         const card = document.createElement("div");
         card.classList.add("card");
+        card.style.maxWidth = "360px";
 
         const title = document.createElement("h1");
         title.style.margin = "0%";
